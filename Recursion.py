@@ -1,17 +1,18 @@
 '''x=input
 print(factorial of x)
 create a function called factorial that returns the factorial of x'''
-'''x = input('Enter Number:\n')
+#x = input('Enter Number:\n')
 def factorial(x):
-    for y in range(x,1,-1):
-        print(y)
-    return'''
-def solver (heads,legs):
-    for roadrunner in range(heads+1):
-        coyote = heads - roadrunner
-        if(coyote*4 + roadrunner*2 == legs):
-            return roadrunner, coyote
-    return "No Solutions"
-solutions = solver(input('Enter Heads: '), input('Enter Legs: '))
-#solutions = solver(35,94)
-print(solutions)
+    num = 1
+    if(x>0):
+        for y in range(2, x+1):
+            num *= y
+        return num
+    elif(x==0):
+        return "1"
+    else:
+        return "Impossible"
+
+number = factorial(3)
+print(number,end='!\n')
+print(factorial(number))
